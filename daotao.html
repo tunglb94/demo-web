@@ -94,6 +94,48 @@
                 transform: translateY(0);
             }
         }
+
+        /* Testimonial carousel specific styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            flex: 0 0 100%; /* Each slide takes full width */
+            padding: 0 1rem; /* Adjust padding as needed */
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(197, 164, 126, 0.7); /* primary color with opacity */
+            color: white;
+            padding: 0.5rem 0.75rem;
+            border-radius: 9999px; /* full rounded */
+            cursor: pointer;
+            z-index: 10;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-button:hover {
+            background-color: #C5A47E; /* primary color */
+        }
+
+        .carousel-button.prev {
+            left: 1rem;
+        }
+
+        .carousel-button.next {
+            right: 1rem;
+        }
     </style>
 </head>
 
@@ -138,82 +180,78 @@
 
         <section class="py-24 bg-white">
             <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl font-['Playfair_Display'] font-bold mb-4">Các Khóa Học Chuyên Nghiệp</h2>
+                    <p class="text-gray-600">Nắm vững kỹ năng, tự tin phát triển sự nghiệp trong ngành nối mi</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-secondary p-8 rounded-lg hover:shadow-lg transition-shadow">
                         <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
                             <i class="ri-book-open-line text-primary text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-['Playfair_Display'] font-bold mb-4">Khóa Học Cơ Bản</h3>
-                        <ul class="space-y-3 text-gray-600 mb-6">
+                        <p class="text-gray-600 mb-2">
+                            <span class="line-through text-gray-500 mr-2">14.000.000 VNĐ</span>
+                            <span class="text-primary text-2xl font-bold">7.000.000 VNĐ</span>
+                        </p>
+                        <p class="text-gray-600 text-sm mb-6">Giảm giá 50% - Thời lượng: Học trong 1 tháng (3-4 buổi/tuần)</p>
+                        <p class="text-gray-700 font-semibold mb-4">Phù hợp với: Người mới bắt đầu – chưa từng học nghề</p>
+                        <h4 class="font-semibold text-lg text-gray-800 mb-3">Nội dung đào tạo:</h4>
+                        <ul class="space-y-2 text-gray-600 mb-6">
                             <li class="flex items-start">
                                 <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Kiến thức cơ bản về nối mi, vệ sinh, an toàn.</span>
+                                <span>**Lý thuyết nền tảng:** Cấu trúc mi – dáng mắt – nguyên lý giữ form, Phân biệt các kiểu mi: Classic, Volume, Mi ướt, Cách chăm sóc mi – phòng tránh rụng mi.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Kỹ thuật nối mi Classic 1:1 chuyên sâu.</span>
+                                <span>**Kỹ thuật nối mi:** Kỹ thuật Classic 1D - Natural cơ bản (Baby doll, Cat eye, Fox eye), Volume cơ bản (2D (angel)), Tạo fan tay - kỹ thuật đặt mi chính xác, Định hình dáng mi phù hợp từng dáng mắt, Xử lý mi yếu – Mi em bé, Mi lông thỏ: tự nhiên – nhẹ – bồng.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Thực hành trên mô hình và người thật dưới sự hướng dẫn.</span>
+                                <span>**Thực hành:** Thực hành trên mi giả và người thật, Sửa lỗi sai thường gặp, Tập giữ độ bền, form mi đều – mượt.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Cấp chứng chỉ hoàn thành khóa học.</span>
+                                <span>**Ra nghề tự tin:** Tư vấn dụng cụ - sản phẩm cần thiết, Cách nhận khách tại nhà.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>**Dịch vụ kèm:** Uốn mi (Lash Lift), Dựng mày (Brow Lamination).</span>
                             </li>
                         </ul>
                         <a href="https://zalo.me/0852759678"
                             class="w-full !rounded-button bg-primary hover:bg-opacity-90 text-white px-6 py-3 font-medium transition-all block text-center">Đăng
                             Ký Ngay</a>
                     </div>
+
                     <div class="bg-secondary p-8 rounded-lg hover:shadow-lg transition-shadow">
                         <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
                             <i class="ri-flight-takeoff-line text-primary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-['Playfair_Display'] font-bold mb-4">Khóa Học Nâng Cao</h3>
-                        <ul class="space-y-3 text-gray-600 mb-6">
+                        <h3 class="text-xl font-['Playfair_Display'] font-bold mb-4">Khóa Học Trọn Bộ</h3>
+                        <p class="text-gray-600 mb-2">
+                            <span class="line-through text-gray-500 mr-2">36.000.000 VNĐ</span>
+                            <span class="text-primary text-2xl font-bold">18.000.000 VNĐ</span>
+                        </p>
+                        <p class="text-gray-600 text-sm mb-6">Giảm giá 50% - Thời lượng: Học trong 1,5-2 tháng</p>
+                        <p class="text-gray-700 font-semibold mb-4">Phù hợp với: Người muốn đi sâu kỹ thuật nâng cao theo nghề nghiêm túc</p>
+                        <h4 class="font-semibold text-lg text-gray-800 mb-3">Nội dung đào tạo:</h4>
+                        <ul class="space-y-2 text-gray-600 mb-6">
                             <li class="flex items-start">
                                 <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Kỹ thuật nối mi Volume, Hybrid, Cat-eye, Doll-eye.</span>
+                                <span>**Kỹ thuật nối mi nâng cao:** Volume nâng cao: 3D-4D-6D-8D, Mega Volume (10D - 15D): tạo fan mỏng, chuẩn form, Mi Trung Hoa, Mi Katun, Mi Layer, Mi Wispy, Kỹ thuật mi ướt – giấu gốc – mi chùm – mi trong suốt, Sole dáng bay – Sole thiết kế, Hybrid - Anime, Thiết kế mi đa tầng.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Tạo style phù hợp từng khách hàng, phân tích dáng mắt.</span>
+                                <span>**Tư duy thiết kế dáng mi:** Mapping mi theo gương mặt & phong cách cá nhân, Blend mi mượt, giữ fan đều & tự nhiên, Sửa form lỗi – xử lý nền mi yếu.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Thực hành nâng cao trên người thật, xử lý các tình huống phức tạp.</span>
+                                <span>**Hành nghề chuyên nghiệp:** Tư vấn dịch vụ – chăm sóc khách khó, Xây dựng hình ảnh cá nhân – giữ chân khách, Hướng dẫn set bảng giá – định hình phong cách làm nghề.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Tư vấn khởi nghiệp và xây dựng thương hiệu cá nhân.</span>
-                            </li>
-                        </ul>
-                        <a href="https://zalo.me/0852759678"
-                            class="w-full !rounded-button bg-primary hover:bg-opacity-90 text-white px-6 py-3 font-medium transition-all block text-center">Đăng
-                            Ký Ngay</a>
-                    </div>
-                    <div class="bg-secondary p-8 rounded-lg hover:shadow-lg transition-shadow">
-                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
-                            <i class="ri-vip-crown-line text-primary text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-['Playfair_Display'] font-bold mb-4">Khóa Master</h3>
-                        <ul class="space-y-3 text-gray-600 mb-6">
-                            <li class="flex items-start">
-                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Kỹ thuật nối mi Mega Volume, Kimono, Russian Volume.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Styling nâng cao, tạo hiệu ứng 3D, 4D, 5D.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Quản lý và phát triển salon, chiến lược marketing hiệu quả.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
-                                <span>Đào tạo kỹ năng kinh doanh, quản lý tài chính và nhân sự.</span>
+                                <span>**Hỗ trợ sau khóa học:** Hỗ trợ kỹ thuật trọn đời, Hướng dẫn quay video - chụp ảnh – xây.</span>
                             </li>
                         </ul>
                         <a href="https://zalo.me/0852759678"
@@ -224,74 +262,111 @@
             </div>
         </section>
 
-        <section class="py-24">
+        <section class="py-24 bg-secondary">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-4xl font-['Playfair_Display'] font-bold mb-4">Đánh Giá Từ Học Viên</h2>
-                    <p class="text-gray-600">Những đánh giá chân thực từ học viên đã hoàn thành khóa học tại Nanky Beauty
-                    </p>
+                    <h2 class="text-4xl font-['Playfair_Display'] font-bold mb-4">Hình Ảnh Đào Tạo Thực Tế</h2>
+                    <p class="text-gray-600">Những khoảnh khắc học viên thực hành và phát triển kỹ năng tại Nanky Beauty</p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-sm">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                                <img src="https://readdy.ai/api/search-image?query=beautiful%20young%20asian%20woman%20face%20portrait%2C%20natural%20makeup%2C%20professional%20headshot&width=100&height=100&seq=2&orientation=squarish"
-                                    alt="Học viên" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Nguyễn Thị Hương</h4>
-                                <div class="flex text-primary">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-600">"Khóa học rất bổ ích, giảng viên nhiệt tình và chuyên nghiệp. Tôi đã tự tin mở tiệm riêng sau khi tốt nghiệp!"</p>
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="uploaded:image_6c631f.jpg-6b748c75-d10f-4f18-ba0b-95cb7e4ada79" alt="Học viên thực hành nối mi" class="w-full h-64 object-cover">
                     </div>
-                    <div class="bg-white p-8 rounded-lg shadow-sm">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                                <img src="https://readdy.ai/api/search-image?query=beautiful%20young%20asian%20woman%20face%20portrait%2C%20elegant%20makeup%2C%20professional%20headshot&width=100&height=100&seq=3&orientation=squarish"
-                                    alt="Học viên" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Trần Thị Mai Anh</h4>
-                                <div class="flex text-primary">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-600">"Môi trường học tập thân thiện, kiến thức thực tế. Tôi rất hài lòng với những gì đã học được."</p>
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="uploaded:image_6c6321.jpg-7f478285-bed2-4f24-8756-4f4f8806c4d4" alt="Học viên thực hành nối mi" class="w-full h-64 object-cover">
                     </div>
-                    <div class="bg-white p-8 rounded-lg shadow-sm">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                                <img src="https://readdy.ai/api/search-image?query=beautiful%20young%20asian%20woman%20face%20portrait%2C%20soft%20makeup%2C%20professional%20headshot&width=100&height=100&seq=4&orientation=squarish"
-                                    alt="Học viên" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Lê Thanh Thảo</h4>
-                                <div class="flex text-primary">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-gray-600">"Nanky Beauty đã giúp tôi biến đam mê thành sự nghiệp. Tôi rất biết ơn đội ngũ giảng viên tận tâm!"</p>
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="uploaded:image_6c6627.jpg-293bd846-752f-482d-8e0d-75525cfe5a19" alt="Học viên thực hành nối mi" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="uploaded:image_6c6667.jpg-17a884e6-3c93-4698-910a-6926a1bd1734" alt="Học viên thực hành nối mi" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="uploaded:image_6c6a88.jpg-0c3126e7-5f5f-4cc5-862a-dad0a0181065" alt="Học viên thực hành nối mi" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="uploaded:image_6c6d49.jpg-54378033-d345-4286-bdd5-1ea721820d10" alt="Học viên thực hành dựng mày" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="uploaded:image_6c6d51.jpg-fe053f5f-ea1f-4f28-be34-2726e39dadcc" alt="Học viên thực hành" class="w-full h-64 object-cover">
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl font-['Playfair_Display'] font-bold mb-4">Đánh Giá Từ Học Viên</h2>
+                    <p class="text-gray-600">Những đánh giá chân thực từ học viên đã hoàn thành khóa học tại Nanky Beauty</p>
+                </div>
+
+                <div class="relative carousel-container max-w-2xl mx-auto">
+                    <div class="carousel-slides" id="testimonial-slides">
+                        <div class="carousel-slide">
+                            <div class="bg-secondary p-8 rounded-lg shadow-sm text-center">
+                                <div class="flex flex-col items-center mb-6">
+                                    <div class="w-20 h-20 rounded-full overflow-hidden mb-4">
+                                        <img src="https://readdy.ai/api/search-image?query=beautiful%20young%20asian%20woman%20face%20portrait%2C%20natural%20makeup%2C%20professional%20headshot&width=100&height=100&seq=2&orientation=squarish"
+                                            alt="Học viên Nguyễn Thị Hương" class="w-full h-full object-cover">
+                                    </div>
+                                    <h4 class="font-medium text-xl">Nguyễn Thị Hương</h4>
+                                    <div class="flex text-primary mt-2">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 text-lg italic">"Khóa học rất bổ ích, giảng viên nhiệt tình và chuyên nghiệp. Tôi đã tự tin mở tiệm riêng sau khi tốt nghiệp!"</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="bg-secondary p-8 rounded-lg shadow-sm text-center">
+                                <div class="flex flex-col items-center mb-6">
+                                    <div class="w-20 h-20 rounded-full overflow-hidden mb-4">
+                                        <img src="https://readdy.ai/api/search-image?query=beautiful%20young%20asian%20woman%20face%20portrait%2C%20elegant%20makeup%2C%20professional%20headshot&width=100&height=100&seq=3&orientation=squarish"
+                                            alt="Học viên Trần Thị Mai Anh" class="w-full h-full object-cover">
+                                    </div>
+                                    <h4 class="font-medium text-xl">Trần Thị Mai Anh</h4>
+                                    <div class="flex text-primary mt-2">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 text-lg italic">"Môi trường học tập thân thiện, kiến thức thực tế. Tôi rất hài lòng với những gì đã học được."</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="bg-secondary p-8 rounded-lg shadow-sm text-center">
+                                <div class="flex flex-col items-center mb-6">
+                                    <div class="w-20 h-20 rounded-full overflow-hidden mb-4">
+                                        <img src="https://readdy.ai/api/search-image?query=beautiful%20young%20asian%20woman%20face%20portrait%2C%20soft%20makeup%2C%20professional%20headshot&width=100&height=100&seq=4&orientation=squarish"
+                                            alt="Học viên Lê Thanh Thảo" class="w-full h-full object-cover">
+                                    </div>
+                                    <h4 class="font-medium text-xl">Lê Thanh Thảo</h4>
+                                    <div class="flex text-primary mt-2">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 text-lg italic">"Nanky Beauty đã giúp tôi biến đam mê thành sự nghiệp. Tôi rất biết ơn đội ngũ giảng viên tận tâm!"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
 
         <section class="py-16 bg-secondary text-center">
             <div class="container mx-auto px-6">
@@ -333,7 +408,7 @@
                         <li><a href="index.html" class="text-gray-600 hover:text-primary">Trang chủ</a></li>
                         <li><a href="dichvu.html" class="text-gray-600 hover:text-primary">Dịch vụ</a></li>
                         <li><a href="banggia.html" class="text-gray-600 hover:text-primary">Bảng giá</a></li>
-                        <li><a href="https://zalo.me/0852759678" class="text-gray-600 hover:text-primary">Đặt lịch</a></li>
+                        <li><a href="https://zalo.me/0852759678" class="text-gray-800 hover:text-primary transition-colors">Đặt lịch</a></li>
                         <li><a href="daotao.html" class="text-gray-600 hover:text-primary">Đào tạo</a></li>
                     </ul>
                 </div>
@@ -379,6 +454,31 @@
                     header.classList.remove('shadow-md');
                 }
             });
+
+            // Testimonial Carousel Logic
+            const slidesContainer = document.getElementById('testimonial-slides');
+            const slides = document.querySelectorAll('.carousel-slide');
+            let currentSlide = 0;
+
+            function updateCarousel() {
+                const slideWidth = slides[0].clientWidth; // Get width of a single slide
+                slidesContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+            }
+
+            window.addEventListener('resize', updateCarousel); // Adjust on resize
+
+            window.moveSlide = function(direction) {
+                currentSlide += direction;
+                if (currentSlide < 0) {
+                    currentSlide = slides.length - 1;
+                } else if (currentSlide >= slides.length) {
+                    currentSlide = 0;
+                }
+                updateCarousel();
+            };
+
+            // Initial load update
+            updateCarousel();
         });
     </script>
 </body>
