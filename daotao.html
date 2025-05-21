@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đào Tạo - Nanky Beauty</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Cormorant+Garamond:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C5A47E',
+                        secondary: '#FAF9F6'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Base styles for Remixicon */
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        /* Hero section animation for floating effect (kept for consistency, but not used in this simplified page) */
+        .hero-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Blink animation for star icons (kept for consistency) */
+        .blink {
+            animation: blink 2s ease-in-out infinite;
+            opacity: 0;
+        }
+
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Slide-fade animation (kept for consistency) */
+        .slide-fade {
+            animation: slideFade 1s ease-in-out;
+        }
+
+        @keyframes slideFade {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="font-['Poppins']">
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-3xl font-['Cormorant_Garamond'] font-bold text-primary">Nanky Beauty</a>
+                <nav class="hidden md:flex items-center space-x-8 uppercase">
+                    <a href="index.html" class="text-gray-800 hover:text-primary transition-colors">Trang chủ</a>
+                    <a href="dichvu.html" class="text-gray-800 hover:text-primary transition-colors">Dịch vụ</a>
+                    <a href="banggia.html" class="text-gray-800 hover:text-primary transition-colors">Bảng giá</a>
+                    <a href="https://zalo.me/0852759678" class="text-gray-800 hover:text-primary transition-colors">Đặt lịch</a>
+                    <a href="daotao.html" class="text-gray-800 hover:text-primary transition-colors">Đào tạo</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <a href="tel:0852759678" class="hidden md:flex items-center space-x-2 text-primary">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="ri-phone-line text-xl"></i>
+                        </div>
+                        <span class="font-medium">0852.759.678</span>
+                    </a>
+                    <button class="md:hidden w-8 h-8 flex items-center justify-center">
+                        <i class="ri-menu-line text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pt-24 relative overflow-hidden"
+            style="background-image: url('https://readdy.ai/api/search-image?query=luxury%20spa%20interior%20with%20gold%20and%20white%20theme%2C%20elegant%20and%20minimalist%20design%2C%20soft%20lighting%2C%20crystal%20chandeliers%2C%20marble%20floors%2C%20high-end%20beauty%20salon%20atmosphere&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            <div class="container mx-auto px-6 py-16 relative text-center text-white">
+                <h1 class="text-5xl md:text-6xl font-['Playfair_Display'] font-bold leading-tight">
+                    Chương Trình Đào Tạo
+                </h1>
+                <p class="text-lg opacity-90 mt-4">Khởi đầu sự nghiệp làm đẹp của bạn với các khóa học chuyên nghiệp</p>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-secondary p-8 rounded-lg hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+                            <i class="ri-book-open-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-['Playfair_Display'] font-bold mb-4">Khóa Học Cơ Bản</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Kiến thức cơ bản về nối mi, vệ sinh, an toàn.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Kỹ thuật nối mi Classic 1:1 chuyên sâu.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Thực hành trên mô hình và người thật dưới sự hướng dẫn.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Cấp chứng chỉ hoàn thành khóa học.</span>
+                            </li>
+                        </ul>
+                        <a href="https://zalo.me/0852759678"
+                            class="w-full !rounded-button bg-primary hover:bg-opacity-90 text-white px-6 py-3 font-medium transition-all block text-center">Đăng
+                            Ký Ngay</a>
+                    </div>
+                    <div class="bg-secondary p-8 rounded-lg hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+                            <i class="ri-flight-takeoff-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-['Playfair_Display'] font-bold mb-4">Khóa Học Nâng Cao</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Kỹ thuật nối mi Volume, Hybrid, Cat-eye, Doll-eye.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Tạo style phù hợp từng khách hàng, phân tích dáng mắt.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Thực hành nâng cao trên người thật, xử lý các tình huống phức tạp.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Tư vấn khởi nghiệp và xây dựng thương hiệu cá nhân.</span>
+                            </li>
+                        </ul>
+                        <a href="https://zalo.me/0852759678"
+                            class="w-full !rounded-button bg-primary hover:bg-opacity-90 text-white px-6 py-3 font-medium transition-all block text-center">Đăng
+                            Ký Ngay</a>
+                    </div>
+                    <div class="bg-secondary p-8 rounded-lg hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+                            <i class="ri-vip-crown-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-['Playfair_Display'] font-bold mb-4">Khóa Master</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Kỹ thuật nối mi Mega Volume, Kimono, Russian Volume.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Styling nâng cao, tạo hiệu ứng 3D, 4D, 5D.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Quản lý và phát triển salon, chiến lược marketing hiệu quả.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span>Đào tạo kỹ năng kinh doanh, quản lý tài chính và nhân sự.</span>
+                            </li>
+                        </ul>
+                        <a href="https://zalo.me/0852759678"
+                            class="w-full !rounded-button bg-primary hover:bg-opacity-90 text-white px-6 py-3 font-medium transition-all block text-center">Đăng
+                            Ký Ngay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-4xl font-['Playfair_Display'] font-bold mb-4">Đánh Giá Từ Học Viên</h2>
+                    <p class="text-gray-600">Những đánh giá chân thực từ học viên đã hoàn thành khóa học tại Nanky Beauty
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://readdy.ai/api/search-image?query=beautiful%20young%20asian%20woman%20face%20portrait%2C%20natural%20makeup%2C%20professional%20headshot&width=100&height=100&seq=2&orientation=squarish"
+                                    alt="Học viên" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Nguyễn Thị Hương</h4>
+                                <div class="flex text-primary">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Khóa học rất bổ ích, giảng viên nhiệt tình và chuyên nghiệp. Tôi đã tự tin mở tiệm riêng sau khi tốt nghiệp!"</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://readdy.ai/api/search-image?query=beautiful%20young%20asian%20woman%20face%20portrait%2C%20elegant%20makeup%2C%20professional%20headshot&width=100&height=100&seq=3&orientation=squarish"
+                                    alt="Học viên" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Trần Thị Mai Anh</h4>
+                                <div class="flex text-primary">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Môi trường học tập thân thiện, kiến thức thực tế. Tôi rất hài lòng với những gì đã học được."</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://readdy.ai/api/search-image?query=beautiful%20young%20asian%20woman%20face%20portrait%2C%20soft%20makeup%2C%20professional%20headshot&width=100&height=100&seq=4&orientation=squarish"
+                                    alt="Học viên" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Lê Thanh Thảo</h4>
+                                <div class="flex text-primary">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Nanky Beauty đã giúp tôi biến đam mê thành sự nghiệp. Tôi rất biết ơn đội ngũ giảng viên tận tâm!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-secondary text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-['Playfair_Display'] font-bold mb-4">Sẵn sàng bắt đầu sự nghiệp của bạn?</h2>
+                <p class="text-gray-600 mb-8">Đăng ký khóa học ngay hôm nay để nhận ưu đãi đặc biệt!</p>
+                <a href="https://zalo.me/0852759678"
+                    class="!rounded-button bg-primary hover:bg-opacity-90 text-white px-8 py-3 font-medium transition-all inline-block">
+                    Đăng Ký Khóa Học
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-['Cormorant_Garamond'] font-bold text-primary mb-6">Nanky Beauty</h3>
+                    <p class="text-gray-600 mb-6">Chuyên gia nối mi hàng đầu với hơn 5 năm kinh nghiệm, mang đến vẻ đẹp tự
+                        nhiên cho đôi mắt của bạn.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/nanky.beaute" target="_blank"
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary hover:bg-opacity-20 transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nanky.beauty" target="_blank"
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary hover:bg-opacity-20 transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary hover:bg-opacity-20 transition-colors">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-6">Liên Kết Nhanh</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-600 hover:text-primary">Trang chủ</a></li>
+                        <li><a href="dichvu.html" class="text-gray-600 hover:text-primary">Dịch vụ</a></li>
+                        <li><a href="banggia.html" class="text-gray-600 hover:text-primary">Bảng giá</a></li>
+                        <li><a href="https://zalo.me/0852759678" class="text-gray-600 hover:text-primary">Đặt lịch</a></li>
+                        <li><a href="daotao.html" class="text-gray-600 hover:text-primary">Đào tạo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-6">Giờ Làm Việc</h4>
+                    <ul class="space-y-4 text-gray-600">
+                        <li>Thứ 2 - Thứ 6: 9:00 - 21:00</li>
+                        <li>Thứ 7: 9:00 - 20:00</li>
+                        <li>Chủ nhật: 10:00 - 18:00</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-6">Liên Hệ</h4>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="ri-map-pin-line mr-2"></i>
+                            71 Vành Đai Tây, Phường An Khánh, Quận 2, TP.HCM
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-phone-line mr-2"></i>
+                            0852.759.678
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-2"></i>
+                            info@nankybeauty.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t pt-8 text-center text-gray-600">
+                <p>&copy; 2024 Nanky Beauty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 0) {
+                    header.classList.add('shadow-md');
+                } else {
+                    header.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
